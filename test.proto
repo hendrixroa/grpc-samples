@@ -1,0 +1,16 @@
+syntax = 'proto3';
+
+package tests;
+
+service Testing {
+  rpc sendTest(ParamTest) returns (ParamResponse) {}
+}
+
+message ParamTest {
+  string param = 1;
+}
+
+message ParamResponse {
+  string responseText = 1;
+  int64 responseNumber = 2;
+}
